@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>SM-T110 Macro Deck</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="icon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+<div id="topbar"><span id="status">Bağlanıyor...</span></div>
+<div id="deck"></div>
+<div id="message"></div><div id="statusButton" onclick="toggleStatusMenu()" title="Bağlantı durumu">
+    <span id="statusDot"></span>
+</div>
+<div id="statusMenu">
+    <div class="sm-title">Macro Deck</div>
+    <div class="sm-row"><span>Durum</span><strong id="menuStatus">Kontrol ediliyor...</strong></div>
+    <div class="sm-row"><span>Sunucu</span><strong id="menuServer">-</strong></div>
+    <div class="sm-row"><span>Port</span><strong>8191</strong></div>
+    <div class="sm-row"><span>Fullscreen</span><strong id="menuFullscreen">-</strong></div>
+    <button type="button" id="reconnectButton" onclick="manualReconnect()">Yeniden bağlan</button>
+    <button type="button" id="connectionSettingsButton" onclick="TPOpenConnectionSettings()">Bağlantı ayarları</button>
+    <button type="button" id="fullscreenButton" onclick="goFullscreen()">Tam ekran</button>
+    <button type="button" id="closeStatusButton" onclick="toggleStatusMenu()">Kapat</button>
+</div>
+<div id="fs" onclick="goFullscreen()">Tam ekran</div>
+<script type="text/javascript" src="client.js"></script>
+</body>
+</html>
