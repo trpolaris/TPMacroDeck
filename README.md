@@ -1,158 +1,271 @@
-# TP Macro Deck
+# 🎛️ TP Macro Deck
 
-A lightweight bridge that turns Android tablets into remote control surfaces for Macro Deck.
+<p align="center">
+  <strong>Android telefon ve tabletleri Macro Deck için modern bir kontrol paneline dönüştürün.</strong>
+</p>
 
-TP Macro Deck provides:
+<p align="center">
+  Windows üzerinde çalışan TP Macro Deck Server/Client ile Android cihaz arasında bağlantı kurarak Macro Deck butonlarını dokunmatik bir arayüz üzerinden kullanmanızı sağlar.
+</p>
 
-- Android tablet client based on WebView
-- Windows bridge client
-- Wi-Fi and USB/ADB connectivity
-- Macro Deck WebSocket integration
-- Touch, long-press and release events
-- Fullscreen / kiosk-style tablet UI
-- Persistent connection settings
-- Isolated ADB server support for USB mode
-- Android 4.2.2+ compatibility (API 17+)
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Android-0078D6?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Connection-Wi--Fi%20%7C%20USB-00A98F?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Macro%20Deck-Compatible-6C63FF?style=for-the-badge">
+</p>
 
-## Architecture
+---
+
+## 📱 Proje Hakkında
+
+**TP Macro Deck**, kullanılmayan Android telefon veya tabletleri bilgisayardaki **Macro Deck** sistemi için dokunmatik bir kontrol paneline dönüştürmek amacıyla geliştirilmiştir.
+
+Android tarafındaki arayüz, Windows tarafındaki TP Macro Deck Server/Client üzerinden Macro Deck ile iletişim kurar.
+
+### ✨ Özellikler
+
+- 📱 Android telefon ve tablet desteği
+- 🖥️ Windows Server / Client
+- 📶 Wi-Fi üzerinden bağlantı
+- 🔌 USB / ADB bağlantısı
+- 🎛️ Macro Deck butonlarını Android cihazdan kullanma
+- 🎮 Oyun ve uygulama kısayolları
+- 🎙️ OBS ve yayın kontrolleri
+- 🔊 Ses ve medya kontrolleri
+- ⚡ Yerel ağ üzerinden hızlı bağlantı
+- 🌐 İnternet bağlantısı gerektirmeden kullanım
+- 🖥️ Tam ekran kontrol paneli
+
+---
+
+## 🧩 Sistem Mimarisi
+
+### Wi-Fi
 
 ```text
-Android Tablet
-      │
-      ├── Wi-Fi ───────────────┐
-      │                        ▼
-      │                 TP Macro Deck
-      │                    Bridge
-      │                        │
-      └── USB / ADB ───────────┤
-                               ▼
-                         Macro Deck
-                           WebSocket
-                             :8191
+┌──────────────────────┐
+│    Android Client    │
+│   📱 Telefon/Tablet  │
+└──────────┬───────────┘
+           │ Wi-Fi
+           ▼
+┌──────────────────────┐
+│ TP Macro Deck Server │
+│    🖥️ Windows PC     │
+└──────────┬───────────┘
+           │ WebSocket
+           ▼
+┌──────────────────────┐
+│      Macro Deck      │
+│      🎛️ Windows      │
+└──────────────────────┘
 ```
 
-In USB mode, the bridge uses a dedicated ADB server and forwards the Android TCP service to the Windows client.
+### USB / ADB
 
-## Repository layout
+```text
+┌──────────────────────┐
+│    Android Client    │
+│         📱           │
+└──────────┬───────────┘
+           │ USB / ADB
+           ▼
+┌──────────────────────┐
+│ TP Macro Deck Client │
+│       🖥️ Windows     │
+└──────────┬───────────┘
+           │ WebSocket
+           ▼
+┌──────────────────────┐
+│      Macro Deck      │
+└──────────────────────┘
+```
+
+---
+
+# 🖼️ Uygulama İçi Görüntüler
+
+## 🎛️ Macro Deck Dashboard
+
+TP Macro Deck üzerinde Macro Deck butonları, sistem monitörü, saat/tarih ve medya kontrolleri aynı arayüz içerisinde kullanılabilir.
+
+<p align="center">
+  <img src="docs/screenshots/macrodeck-dashboard.png" alt="TP Macro Deck Dashboard" width="900">
+</p>
+
+## 🔌 Android Bağlantı Ayarları
+
+Android Client üzerinden Windows bilgisayarın IP adresi ve Bridge Port bilgileri girilerek bağlantı kurulabilir.
+
+<p align="center">
+  <img src="docs/screenshots/android-connection.png" alt="Android Connection Settings" width="700">
+</p>
+
+## 🖥️ Windows Client
+
+Windows tarafındaki TP Macro Deck Client üzerinden Macro Deck IP adresi ve port bilgileri yapılandırılır.
+
+<p align="center">
+  <img src="docs/screenshots/windows-client.png" alt="Windows TP Macro Deck Client" width="500">
+</p>
+
+## 📡 Bağlantı Durumu
+
+Android arayüzü bağlantı durumunu, sunucu adresini ve port bilgisini görüntüleyebilir. Yeniden bağlanma ve tam ekran gibi kontroller de arayüz üzerinden kullanılabilir.
+
+<p align="center">
+  <img src="docs/screenshots/macrodeck-status.png" alt="TP Macro Deck Connection Status" width="900">
+</p>
+
+---
+
+# 📋 Gereksinimler
+
+### Windows
+
+- Windows bilgisayar
+- [Macro Deck](https://macrodeck.org/)
+- TP Macro Deck Windows Server/Client
+- Wi-Fi veya desteklenen USB/ADB bağlantısı
+
+### Android
+
+- Android telefon veya tablet
+- TP Macro Deck Android Client
+- Wi-Fi veya desteklenen USB/ADB bağlantısı
+
+### Ağ
+
+Wi-Fi kullanımında Android cihaz ve Windows bilgisayar aynı yerel ağ üzerinde olmalıdır.
+
+Örnek:
+
+```text
+PC      → 192.168.1.45
+Android → 192.168.1.20
+```
+
+İnternet bağlantısı gerekli değildir.
+
+---
+
+# 🚀 Kurulum
+
+## 1. Macro Deck
+
+Windows bilgisayarınıza Macro Deck'i kurun ve çalıştırın.
+
+## 2. Windows Server / Client
+
+`windows-server` klasöründeki TP Macro Deck Client'ı çalıştırın.
+
+Client, Android cihaz ile Macro Deck arasındaki iletişimi sağlar.
+
+## 3. Windows IP adresini öğrenin
+
+Windows CMD:
+
+```cmd
+ipconfig
+```
+
+`IPv4 Address` değerini bulun.
+
+Örnek:
+
+```text
+192.168.1.45
+```
+
+## 4. Android Client
+
+Android uygulamasını cihazınıza yükleyin.
+
+Bağlantı ekranında Windows bilgisayarın IP adresini ve Bridge Port değerini girin.
+
+```text
+PC IP      : 192.168.1.45
+Bridge Port: 8080
+```
+
+Ardından **BAĞLAN** butonuna basın.
+
+> ⚠️ PC IP adresi olarak Android cihazın IP adresini değil, TP Macro Deck Server/Client'ın çalıştığı Windows bilgisayarın IP adresini kullanın.
+
+---
+
+# 🎯 Kullanım Alanları
+
+- 🎙️ OBS kontrolü
+- 🔴 Yayın başlatma / durdurma
+- 🎤 Mikrofon kontrolü
+- 🔊 Ses kontrolü
+- 🎵 Spotify / medya kontrolü
+- 🌐 Tarayıcı açma
+- 💻 Program çalıştırma
+- ⌨️ Klavye kısayolları
+- 🎮 Oyun kısayolları
+- ⚙️ Özel Macro Deck eylemleri
+- 🖥️ Sistem bilgilerini görüntüleme
+
+---
+
+# 📁 Proje Yapısı
 
 ```text
 TPMacroDeck/
-├── windows-client/       # Windows bridge and EXE packaging
-│   ├── bridge_server.py
-│   ├── client.js
-│   ├── index.html
-│   ├── style.css
-│   ├── requirements.txt
-│   ├── TPMacroDeckClient.spec
-│   ├── adb.exe
-│   ├── AdbWinApi.dll
-│   └── AdbWinUsbApi.dll
 │
-├── android-client/       # Android WebView client
-│   ├── app/
-│   ├── gradle/
-│   ├── build.gradle
-│   └── settings.gradle
+├── android-client/
+│   └── Android uygulaması
 │
-├── .gitignore
+├── windows-server/
+│   └── Windows TP Macro Deck Server / Client
+│
+├── docs/
+│   └── screenshots/
+│       ├── macrodeck-dashboard.png
+│       ├── macrodeck-status.png
+│       ├── android-connection.png
+│       └── windows-client.png
+│
+├── README.md
 ├── LICENSE
-└── README.md
+└── .gitignore
 ```
 
-## Requirements
+---
 
-### Windows bridge
+# 🛠️ Bağlantı Sorunları
 
-- Windows 10/11
-- Python 3.x
-- Macro Deck running and reachable on TCP port `8191`
-- For USB mode: Android device with USB debugging enabled
+1. TP Macro Deck Server/Client'ın çalıştığından emin olun.
+2. Macro Deck'in Windows bilgisayarda açık olduğunu kontrol edin.
+3. Android ve Windows cihazın aynı Wi-Fi ağında olduğunu kontrol edin.
+4. Windows bilgisayarın IP adresinin doğru olduğunu kontrol edin.
+5. Bridge Port değerinin doğru olduğunu kontrol edin.
+6. Windows Güvenlik Duvarı'nın bağlantıyı engellemediğinden emin olun.
+7. TP Macro Deck Client'ı yeniden başlatın.
+8. Android uygulamasından bağlantıyı yeniden deneyin.
 
-Install Python dependencies:
+---
 
-```bat
-cd windows-client
-python -m pip install -r requirements.txt
-```
+# 🔧 Geliştirme
 
-Run from source:
+Projeye katkıda bulunmak, hata bildirmek veya yeni özellik önermek için GitHub Issues ve Pull Requests kullanılabilir.
 
-```bat
-python bridge_server.py
-```
+Windows Server ve Android Client bölümleri ayrı olarak geliştirilebilir.
 
-Or use:
+---
 
-```bat
-run.bat
-```
+# 📄 Lisans
 
-## Build Windows EXE
+Bu proje **MIT License** altında dağıtılmaktadır.
 
-The packaging script creates a standalone Windows executable with PyInstaller:
+Detaylar için [`LICENSE`](LICENSE) dosyasına bakabilirsiniz.
 
-```bat
-cd windows-client
-build_exe_packaging_only.bat
-```
+---
 
-Output:
+## 👤 Geliştirici
 
-```text
-dist/TPMacroDeckClient.exe
-```
+**TR POLARIS**
 
-## Android client
-
-The Android project targets old Android devices and currently uses:
-
-- Minimum SDK: 17 (Android 4.2.2)
-- Target SDK: 28
-- Android Gradle Plugin: 7.2.0
-- Gradle: 7.3.3 or compatible
-- Java 8 source compatibility
-
-Build:
-
-```bat
-cd android-client
-gradle assembleDebug
-```
-
-APK output:
-
-```text
-app/build/outputs/apk/debug/app-debug.apk
-```
-
-Install with ADB:
-
-```bat
-adb install -r app/build/outputs/apk/debug/app-debug.apk
-```
-
-## Connection
-
-The Android client uses the TP bridge for its connection flow. The bridge exposes its local web service on port `8080` and connects to Macro Deck on port `8191`.
-
-For Wi-Fi mode, enter the Windows PC IPv4 address in the Android client connection settings.
-
-For USB mode, enable USB debugging on the Android tablet and connect it to the Windows PC. The Windows bridge uses an isolated ADB server so it does not need to take over another ADB installation.
-
-## USB protocol
-
-The USB transport uses newline-delimited UTF-8 JSON messages. Control messages include:
-
-- `TP_READY`
-- `TP_PING`
-- `TP_PONG`
-- `BUTTON_PRESS`
-- `BUTTON_LONG_PRESS`
-- `BUTTON_RELEASE`
-- `BUTTON_LONG_PRESS_RELEASE`
-
-## Notes
-
-This repository contains source code and required runtime files. Generated build directories, Gradle caches, IDE metadata, local SDK paths, generated APKs and PyInstaller build output are intentionally excluded from Git.
-
-Macro Deck is a separate project and is not included in this repository.
+> TP Macro Deck — Android cihazınızı Macro Deck kontrol paneline dönüştürün.
