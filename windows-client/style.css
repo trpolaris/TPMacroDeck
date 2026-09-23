@@ -1,0 +1,106 @@
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#111;color:#fff;font-family:Arial,sans-serif;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+#topbar{position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden}
+#deck{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;padding:2px;box-sizing:border-box}
+.md-table{display:table;width:100%;height:100%;border-collapse:separate;border-spacing:2px;table-layout:fixed}
+.md-cell{padding:0;vertical-align:middle;height:auto}
+.md-button{position:relative;width:100%;height:100%;min-height:55px;background:#333;border:1px solid #555;border-radius:8px;overflow:hidden;text-align:center;color:#fff}
+.md-icon{position:absolute;left:4px;right:4px;top:4px;bottom:24px;background-position:center center;background-repeat:no-repeat;background-size:contain}
+.md-label{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;padding:0;margin:0;line-height:normal;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-position:center center;background-repeat:no-repeat;background-size:100% 100%;color:#fff;text-align:center}
+.empty{opacity:.28}
+#message{display:none}
+#fs{position:fixed;right:4px;bottom:4px;width:58px;height:20px;line-height:20px;text-align:center;font-size:10px;color:#aaa;background:#222;opacity:.55;border-radius:4px;z-index:999}
+
+#statusButton{
+ position:fixed;
+ right:7px;
+ top:7px;
+ width:18px;
+ height:18px;
+ border-radius:50%;
+ background:#222;
+ border:1px solid #777;
+ z-index:2000;
+ opacity:.75;
+}
+#statusDot{
+ display:block;
+ width:10px;
+ height:10px;
+ margin:4px;
+ border-radius:50%;
+ background:#777;
+}
+#statusMenu{
+ display:none;
+ position:fixed;
+ right:8px;
+ top:31px;
+ width:205px;
+ background:#202020;
+ color:#fff;
+ border:1px solid #555;
+ border-radius:8px;
+ padding:10px;
+ z-index:1999;
+ box-sizing:border-box;
+ font-family:Arial,sans-serif;
+ box-shadow:0 3px 12px rgba(0,0,0,.55);
+}
+#statusMenu.open{display:block}
+.sm-title{
+ font-size:15px;
+ font-weight:bold;
+ margin-bottom:8px;
+ padding-bottom:7px;
+ border-bottom:1px solid #444;
+}
+.sm-row{
+ height:27px;
+ line-height:27px;
+ font-size:12px;
+ border-bottom:1px solid #333;
+}
+.sm-row span{color:#aaa}
+.sm-row strong{float:right;font-weight:normal}
+#reconnectButton,#fullscreenButton,#closeStatusButton{
+ width:100%;
+ height:34px;
+ margin-top:7px;
+ background:#333;
+ color:#fff;
+ border:1px solid #555;
+ border-radius:5px;
+ font-size:12px;
+}
+#reconnectButton:active,#fullscreenButton:active,#closeStatusButton:active{
+ background:#555;
+}
+
+
+/* TP first-run connection setup */
+#TPSetupOverlay{
+ position:fixed;left:0;top:0;right:0;bottom:0;z-index:99999;
+ background:#111;
+ text-align:center;
+}
+.TPSetupCard{
+ position:absolute;left:50%;top:50%;width:360px;max-width:86%;
+ margin-left:-180px;margin-top:-190px;
+ padding:24px;box-sizing:border-box;
+ background:#222;border:1px solid #444;border-radius:14px;
+ color:#fff;font-family:Arial,sans-serif;
+}
+.TPSetupTitle{font-size:24px;font-weight:bold;margin-bottom:8px}
+.TPSetupSub{font-size:14px;color:#aaa;margin-bottom:20px}
+.TPSetupCard label{display:block;text-align:left;font-size:13px;color:#ccc;margin:12px 0 5px}
+.TPSetupCard input{
+ width:100%;height:42px;box-sizing:border-box;padding:0 11px;
+ border:1px solid #555;border-radius:7px;background:#111;color:#fff;
+ font-size:16px;outline:none;
+}
+.TPSetupCard button{
+ width:100%;height:44px;margin-top:18px;border:0;border-radius:7px;
+ background:#3d8bfd;color:#fff;font-size:16px;font-weight:bold;
+}
+#TPSetupStatus{min-height:22px;margin-top:12px;color:#ddd;font-size:13px}
+#connectionSettingsButton{margin-top:6px}
