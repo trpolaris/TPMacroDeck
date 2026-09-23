@@ -1,50 +1,44 @@
 # 🎛️ TP Macro Deck
 
-<p align="center">
-  <img src="docs/screenshots/TPMacroDeck-cover.png" alt="TP Macro Deck" width="100%">
-</p>
+![TP Macro Deck](docs/screenshots/TPMacroDeck-cover.png)
 
-<p align="center">
-  <strong>Android 4.2.2+ cihazları Macro Deck için modern bir kontrol paneline dönüştürün.</strong>
-</p>
+> **Android 4.2.2+ cihazları Macro Deck için modern bir kontrol paneline dönüştürün.**
 
-<p align="center">
-  TP Macro Deck, Android telefon ve tabletleri Windows üzerinde çalışan Macro Deck sistemiyle buluşturan açık kaynak bir Android Client ve Windows Server/Client çözümüdür.
-</p>
+TP Macro Deck, Android telefon ve tabletleri Windows üzerinde çalışan Macro Deck sistemiyle buluşturan Android Client ve Windows Server/Client çözümüdür.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Android-4.2.2%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android 4.2.2+">
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Android-0078D6?style=for-the-badge" alt="Platform">
-  <img src="https://img.shields.io/badge/Connection-Wi--Fi%20%7C%20USB-00A98F?style=for-the-badge" alt="Connection">
-  <img src="https://img.shields.io/badge/Macro%20Deck-Compatible-6C63FF?style=for-the-badge" alt="Macro Deck">
-</p>
+[![Android](https://img.shields.io/badge/Android-4.2.2%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android-0078D6?style=for-the-badge)](#)
+[![Connection](https://img.shields.io/badge/Connection-Wi--Fi%20%7C%20USB-00A98F?style=for-the-badge)](#)
+[![Macro Deck](https://img.shields.io/badge/Macro%20Deck-Compatible-6C63FF?style=for-the-badge)](https://macrodeck.org/)
 
 ---
 
 ## 📱 Proje Hakkında
 
-**TP Macro Deck**, kullanılmayan veya eski Android telefon ve tabletleri bilgisayardaki **Macro Deck** sistemi için dokunmatik bir kontrol paneline dönüştürmek amacıyla geliştirilmiştir.
+**TP Macro Deck**, eski veya kullanılmayan Android telefon ve tabletleri bilgisayardaki **Macro Deck** sistemi için dokunmatik bir kontrol paneline dönüştürmek amacıyla geliştirilmiştir.
 
-Android tarafındaki arayüz, Windows tarafındaki TP Macro Deck Server/Client üzerinden Macro Deck ile iletişim kurar.
+Android Client, Windows üzerinde çalışan TP Macro Deck Server/Client üzerinden Macro Deck ile iletişim kurar.
 
 ### 🟢 Android 4.2.2 ve Üzeri
 
-TP Macro Deck Android Client, **Android 4.2.2 (API 17) ve üzeri** sürümleri hedefler.
+TP Macro Deck Android Client'ın minimum desteklediği sürüm:
+
+**Android 4.2.2 — API 17**
 
 Bu sayede eski Android telefon ve tabletler de Macro Deck kontrol paneli olarak değerlendirilebilir.
 
 > **Minimum Android sürümü: Android 4.2.2 (API 17)**
 
-> ⚠️ Android 4.2.2 veya üzeri olması minimum işletim sistemi gereksinimidir. Cihaz üreticisine, WebView sürümüne ve donanım özelliklerine bağlı olarak bazı özelliklerin kullanılabilirliği değişebilir.
+> Cihaz üreticisine, WebView sürümüne ve donanım özelliklerine bağlı olarak bazı özelliklerin kullanılabilirliği değişebilir.
 
 ---
 
 ## ✨ Özellikler
 
 | Özellik | Açıklama |
-|---|---|
-| 📱 **Android 4.2.2+** | Android 4.2.2 (API 17) ve üzeri cihazlar için Client |
-| 📲 Android Client | Telefon ve tabletlerde dokunmatik Macro Deck arayüzü |
+| --- | --- |
+| 📱 **Android 4.2.2+** | Android 4.2.2 (API 17) ve üzeri cihaz desteği |
+| 📲 Android Client | Telefon ve tabletler için dokunmatik Macro Deck arayüzü |
 | 🖥️ Windows Server / Client | Android ile Macro Deck arasında iletişim köprüsü |
 | 📶 Wi-Fi | Yerel ağ üzerinden bağlantı |
 | 🔌 USB / ADB | Desteklenen cihazlarda USB üzerinden bağlantı |
@@ -54,13 +48,13 @@ Bu sayede eski Android telefon ve tabletler de Macro Deck kontrol paneli olarak 
 | 🔊 Medya | Ses ve medya kontrolleri |
 | ⚡ Yerel Ağ | İnternet bağlantısı olmadan kullanım |
 | 🖥️ Fullscreen | Android cihazı özel kontrol paneli olarak kullanma |
-| 🔄 Bağlantı Yönetimi | Bağlantı durumu ve yeniden bağlanma kontrolleri |
+| 🔄 Bağlantı Yönetimi | Bağlantı durumu ve yeniden bağlanma |
 
 ---
 
 # 📱 Android Uyumluluğu
 
-TP Macro Deck'in önemli hedeflerinden biri eski Android cihazları yeniden kullanılabilir hale getirmektir.
+TP Macro Deck'in temel hedeflerinden biri eski Android cihazları yeniden kullanılabilir hale getirmektir.
 
 ```text
 Minimum
@@ -83,7 +77,7 @@ API 17
 
 **Minimum sürüm:** `Android 4.2.2 / API 17`
 
-Eski tabletler ve telefonlar, yeterli donanım ve uyumlu WebView bulunduğu sürece Macro Deck için ikinci bir ekran veya dokunmatik kontrol paneli olarak değerlendirilebilir.
+Yeterli donanım ve uyumlu WebView bulunan eski tablet ve telefonlar Macro Deck için ikinci ekran veya dokunmatik kontrol paneli olarak kullanılabilir.
 
 ---
 
@@ -94,21 +88,21 @@ Eski tabletler ve telefonlar, yeterli donanım ve uyumlu WebView bulunduğu sür
 ```text
 ┌──────────────────────────┐
 │     Android Client       │
-│   📱 Android 4.2.2+      │
+│   Android 4.2.2+         │
 └────────────┬─────────────┘
              │
              │ Wi-Fi
              ▼
 ┌──────────────────────────┐
 │  TP Macro Deck Server    │
-│       🖥️ Windows         │
+│       Windows            │
 └────────────┬─────────────┘
              │
              │ WebSocket
              ▼
 ┌──────────────────────────┐
 │       Macro Deck         │
-│        🎛️ Windows        │
+│        Windows           │
 └──────────────────────────┘
 ```
 
@@ -117,14 +111,14 @@ Eski tabletler ve telefonlar, yeterli donanım ve uyumlu WebView bulunduğu sür
 ```text
 ┌──────────────────────────┐
 │     Android Client       │
-│   📱 Android 4.2.2+      │
+│   Android 4.2.2+         │
 └────────────┬─────────────┘
              │
              │ USB / ADB
              ▼
 ┌──────────────────────────┐
 │  TP Macro Deck Client    │
-│       🖥️ Windows         │
+│        Windows           │
 └────────────┬─────────────┘
              │
              │ WebSocket
@@ -142,33 +136,31 @@ Eski tabletler ve telefonlar, yeterli donanım ve uyumlu WebView bulunduğu sür
 
 Macro Deck butonları, sistem monitörü, saat/tarih ve medya kontrolleri Android cihaz üzerinde aynı arayüz içerisinde kullanılabilir.
 
-<p align="center">
-  <img src="docs/screenshots/macrodeck-dashboard.png" alt="TP Macro Deck Dashboard" width="900">
-</p>
+![Macro Deck Dashboard](docs/screenshots/macrodeck-dashboard.png)
+
+---
 
 ## 🔌 Android Bağlantı Ayarları
 
-Android Client üzerinde Windows bilgisayarın IP adresi ve Bridge Port bilgileri girilerek bağlantı kurulabilir.
+Android Client üzerinden Windows bilgisayarın IP adresi ve Bridge Port bilgileri girilerek bağlantı kurulabilir.
 
-<p align="center">
-  <img src="docs/screenshots/android-connection.png" alt="TP Macro Deck Android Connection Settings" width="700">
-</p>
+![Android Connection Settings](docs/screenshots/android-connection.png)
+
+---
 
 ## 🖥️ Windows Client
 
 Windows tarafındaki TP Macro Deck Client üzerinden Macro Deck IP adresi ve port bilgileri yapılandırılır.
 
-<p align="center">
-  <img src="docs/screenshots/windows-client.png" alt="TP Macro Deck Windows Client" width="500">
-</p>
+![Windows Client](docs/screenshots/windows-client.png)
+
+---
 
 ## 📡 Bağlantı Durumu
 
-Android arayüzü bağlantı durumunu, sunucu adresini ve port bilgisini görüntüleyebilir. Yeniden bağlanma ve tam ekran kontrolleri de arayüz üzerinden kullanılabilir.
+Android arayüzü bağlantı durumunu, sunucu adresini ve port bilgisini görüntüleyebilir.
 
-<p align="center">
-  <img src="docs/screenshots/macrodeck-status.png" alt="TP Macro Deck Connection Status" width="900">
-</p>
+![Connection Status](docs/screenshots/macrodeck-status.png)
 
 ---
 
@@ -205,17 +197,17 @@ Android → 192.168.1.20
 
 # 🚀 Kurulum
 
-## 1️⃣ Macro Deck
+### 1. Macro Deck
 
 Windows bilgisayarınıza Macro Deck'i kurun ve çalıştırın.
 
-## 2️⃣ Windows Server / Client
+### 2. Windows Server / Client
 
 `windows-server` klasöründeki TP Macro Deck Client'ı çalıştırın.
 
 Client, Android cihaz ile Macro Deck arasındaki iletişimi sağlar.
 
-## 3️⃣ Windows IP adresini öğrenin
+### 3. Windows IP adresini öğrenin
 
 Windows CMD'yi açın:
 
@@ -231,7 +223,7 @@ ipconfig
 192.168.1.45
 ```
 
-## 4️⃣ Android Client'ı kurun
+### 4. Android Client'ı kurun
 
 Android cihazınızın **Android 4.2.2 veya üzeri** olduğundan emin olun.
 
@@ -246,7 +238,7 @@ Bridge Port: 8080
 
 Ardından **BAĞLAN** butonuna basın.
 
-> ⚠️ PC IP adresi olarak Android cihazın IP adresini değil, TP Macro Deck Server/Client'ın çalıştığı Windows bilgisayarın IP adresini kullanın.
+> **Not:** PC IP adresi olarak Android cihazın IP adresini değil, TP Macro Deck Server/Client'ın çalıştığı Windows bilgisayarın IP adresini kullanın.
 
 ---
 
@@ -266,7 +258,7 @@ Ardından **BAĞLAN** butonuna basın.
 
 ---
 
-# ♻️ Eski Android Cihazlar İçin
+# ♻️ Eski Android Cihazları Değerlendirin
 
 TP Macro Deck'in temel kullanım senaryolarından biri, artık günlük kullanımda tercih edilmeyen eski Android telefon ve tabletleri değerlendirmektir.
 
@@ -278,11 +270,11 @@ Eski Android Tablet
 ┌─────────────────────┐
 │   TP Macro Deck     │
 │                     │
-│  🎛️ Macro Deck      │
-│  🎙️ OBS             │
-│  🔊 Media           │
-│  🎮 Games           │
-│  💻 Apps            │
+│   Macro Deck        │
+│   OBS               │
+│   Media             │
+│   Games             │
+│   Apps              │
 └─────────────────────┘
 ```
 
@@ -352,7 +344,4 @@ Detaylar için [`LICENSE`](LICENSE) dosyasına bakabilirsiniz.
 
 **TR POLARIS**
 
-<p align="center">
-  <strong>TP Macro Deck</strong><br>
-  Android 4.2.2+ cihazınızı Macro Deck kontrol paneline dönüştürün.
-</p>
+> **TP Macro Deck** — Android 4.2.2+ cihazınızı Macro Deck kontrol paneline dönüştürün.
